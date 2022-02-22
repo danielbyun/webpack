@@ -79,7 +79,11 @@ export const createArtist = (props) => (dispatch) =>
       history.push(`artists/${artist._id}`)
     })
     .catch((error) => {
+<<<<<<< HEAD
+      console.error(error)
+=======
       console.log(error)
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
       dispatch({type: CREATE_ERROR, payload: error})
     })
 
@@ -87,7 +91,11 @@ export const editArtist = (id, props) => (dispatch) =>
   EditArtistProxy(id, props)
     .then(() => history.push(`artists/${id}`))
     .catch((error) => {
+<<<<<<< HEAD
+      console.error(error)
+=======
       console.log(error)
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
       dispatch({type: CREATE_ERROR, payload: error})
     })
 
@@ -95,7 +103,11 @@ export const deleteArtist = (id) => (dispatch) =>
   DeleteArtistProxy(id)
     .then(() => history.push('/'))
     .catch((error) => {
+<<<<<<< HEAD
+      console.error(error)
+=======
       console.log(error)
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
       dispatch({type: CREATE_ERROR, payload: error})
     })
 
@@ -104,17 +116,25 @@ export const deleteArtist = (id) => (dispatch) =>
 
 const GetAgeRangeProxy = (...args) => {
   const result = GetAgeRange(...args)
+<<<<<<< HEAD
+  if (!result || !result.then) return new Promise(() => {})
+=======
   if (!result || !result.then) {
     return new Promise(() => {})
   }
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
   return result
 }
 
 const GetYearsActiveRangeProxy = (...args) => {
   const result = GetYearsActiveRange(...args)
+<<<<<<< HEAD
+  if (!result || !result.then) return new Promise(() => {})
+=======
   if (!result || !result.then) {
     return new Promise(() => {})
   }
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
   return result
 }
 
@@ -125,68 +145,102 @@ const SearchArtistsProxy = (criteria, offset, limit) => {
     offset,
     limit
   )
+<<<<<<< HEAD
+  if (!result || !result.then) return new Promise(() => {})
+=======
   if (!result || !result.then) {
     return new Promise(() => {})
   }
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
   return result
 }
 
 const FindArtistProxy = (...args) => {
   const result = FindArtist(...args)
+<<<<<<< HEAD
+  if (!result || !result.then) return new Promise(() => {})
+=======
   if (!result || !result.then) {
     return new Promise(() => {})
   }
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
   return result
 }
 
 const CreateArtistProxy = (...args) => {
   const result = CreateArtist(...args)
+<<<<<<< HEAD
+  if (!result || !result.then) return new Promise(() => {})
+=======
   if (!result || !result.then) {
     return new Promise(() => {})
   }
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
   return result
 }
 
 const EditArtistProxy = (...args) => {
   const result = EditArtist(...args)
+<<<<<<< HEAD
+  if (!result || !result.then) return new Promise(() => {})
+=======
   if (!result || !result.then) {
     return new Promise(() => {})
   }
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
   return result
 }
 
 const DeleteArtistProxy = (...args) => {
   const result = DeleteArtist(...args)
+<<<<<<< HEAD
+  if (!result || !result.then) return new Promise(() => {})
+=======
   if (!result || !result.then) {
     return new Promise(() => {})
   }
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
   return result
 }
 
 const SetRetiredProxy = (_ids) => {
   const result = SetRetired(_ids)
+<<<<<<< HEAD
+  if (!result || !result.then) return new Promise(() => {})
+=======
   if (!result || !result.then) {
     return new Promise(() => {})
   }
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
   return result
 }
 
 const SetNotRetiredProxy = (_ids) => {
   const result = SetNotRetired(_ids)
+<<<<<<< HEAD
+  if (!result || !result.then) return new Promise(() => {})
+=======
   if (!result || !result.then) {
     return new Promise(() => {})
   }
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
   return result
 }
 
 //
 // Helpers
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
 const refreshSearch = (dispatch, getState) => {
   const {
     artists: {offset, limit},
   } = getState()
   const criteria = getState().form.filters.values
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
   dispatch(searchArtists(_.extend({}, {name: ''}, criteria), offset, limit))
 }
