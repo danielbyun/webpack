@@ -85,6 +85,15 @@ module.exports = () => {
       optimization: {
         minimize: false,
         minimizer: [new TerserPlugin()],
+        splitChunks: {
+          cacheGroups: {
+            commons: {
+              name: 'commons',
+              chunks: 'initial',
+              minChunks: 2,
+            },
+          },
+        },
       },
     },
   ])
