@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const SET_AGE_RANGE = 'set_age_range'
 const SET_YEARS_ACTIVE_RANGE = 'SET_YEARS_ACTIVE_RANGE'
 const SEARCH_ARTISTS = 'SEARCH_ARTISTS'
@@ -22,15 +21,3 @@ export {
   DESELECT_ARTIST,
   RESET_SELECTION,
 }
-=======
-export const SET_AGE_RANGE = 'set_age_range';
-export const SET_YEARS_ACTIVE_RANGE = 'SET_YEARS_ACTIVE_RANGE';
-export const SEARCH_ARTISTS = 'SEARCH_ARTISTS';
-export const FIND_ARTIST = 'FIND_ARTIST';
-export const RESET_ARTIST = 'RESET_ARTIST';
-export const CREATE_ERROR = 'CREATE_ERROR';
-export const CLEAR_ERROR = 'CLEAR_ERROR';
-export const SELECT_ARTIST = 'SELECT_ARTIST';
-export const DESELECT_ARTIST = 'DESELECT_ARTIST';
-export const RESET_SELECTION = 'RESET_SELECTION';
->>>>>>> 1211fe30d8a5a222877106c182cdfa1d1312c1f6
