@@ -59,8 +59,8 @@ const ArtistDetail = ({
 
   return (
     <div>
-      <When condition={artist}>
-        <Choose>
+      <Choose>
+        <When condition={artist}>
           <div className='spacer'>
             <Link to='/'>Back</Link>
             <Link to={`/artists/${_id}/edit`}>Edit</Link>
@@ -100,11 +100,11 @@ const ArtistDetail = ({
             </li>
             <li className='flex wrap'>{renderAlbums()}</li>
           </ul>
-        </Choose>
+        </When>
         <Otherwise>
           <div>Todo: implement "FindArtist" query</div>
         </Otherwise>
-      </When>
+      </Choose>
     </div>
   )
 }
