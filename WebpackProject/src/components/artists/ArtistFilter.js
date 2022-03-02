@@ -8,7 +8,6 @@ import * as actions from '../../actions'
 const TEXT_FIELDS = [{label: 'Name', prop: 'name'}]
 
 const ArtistFilter = ({
-  handleSubmit,
   searchArtists,
   setAgeRange,
   setYearsActiveRange,

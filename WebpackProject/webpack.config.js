@@ -23,6 +23,7 @@ module.exports = () => {
       filename: 'styles.css',
     }),
     new HtmlWebpackPlugin({
+      template: "src/index.html",
       inlineSource: '.(js|css)$', // embed all javascript and css inline
     }),
   ]
