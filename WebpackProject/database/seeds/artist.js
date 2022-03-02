@@ -2,7 +2,7 @@ import _ from 'lodash'
 import {faker} from '@faker-js/faker'
 import {GENRES} from '../constants'
 
-module.exports = function () {
+module.exports = () => {
   return {
     _id: _.uniqueId(),
     name: faker.name.findName(),
@@ -18,7 +18,7 @@ module.exports = function () {
   }
 }
 
-function getAlbums() {
+const getAlbums = () => {
   return _.times(randomBetween(0, 5), () => {
     const copiesSold = randomBetween(0, 1000000)
 
@@ -33,21 +33,21 @@ function getAlbums() {
   })
 }
 
-function getAlbumImage() {
+const getAlbumImage = () => {
   const types = _.keys(faker.image)
   const method = randomEntry(types)
 
   return faker.image[method]()
 }
 
-function getGenre() {
+const getGenre = () => {
   return randomEntry(GENRES)
 }
 
-function randomEntry(array) {
+const randomEntry = (array) => {
   return array[~~(Math.random() * array.length)]
 }
 
-function randomBetween(min, max) {
+const randomBetween = (min, max) => {
   return ~~(Math.random() * (max - min)) + min
 }
