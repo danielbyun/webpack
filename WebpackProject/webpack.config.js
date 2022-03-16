@@ -32,6 +32,7 @@ module.exports = () => {
   const VENDOR_LIBS = [
     '@faker-js/faker',
     'lodash',
+    'react',
     'react-redux',
     'react-dom',
     'react-input-range',
